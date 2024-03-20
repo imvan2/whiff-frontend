@@ -10,14 +10,12 @@ function SearchBar() {
 
   return (
     <>
-      <div className="center">
-        <input
-          type="text"
-          placeholder=""
-          onChange={handleChange}
-          className="search-bar"
-        ></input>
-      </div>
+      <input
+        type="text"
+        placeholder=""
+        onChange={handleChange}
+        className="search-bar"
+      ></input>
     </>
   );
 }

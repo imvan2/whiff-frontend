@@ -1,117 +1,147 @@
+.detail-container {
+  margin-left: 80px;
+  margin-right: 80px;
+  /* width: 1600px;
+  height: 350px; */
 
-  .detail-title {
-    font-style: italic;
-    margin-left: 0px;
-    border: 1px solid black;
-    width: 200px;
-  }
-  
-  .perfume-name {
-    font-size: 25px;
-  }
-  .perfume-designer {
-    font-size: 15px;
-  }
-  
-  .first-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 1px solid black;
-    margin: 20px 0 50px 0;
-  }
-  
-  .image-large {
-    height: 250px;
-    border: 1px solid black;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-  }
-  .tags-section {
-    border: 1px solid black;
-  
-    width: 250px;
-  }
-  
-  .second-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    border: 1px solid black;
-  }
-  
-  .main-accords-section {
-    margin: 0;
-    border: 1px solid black;
-  }
-  
-  h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    font-weight: 500;
-  }
-  
-  .pill {
-    border-radius: 20px;
-    border: 1px solid black;
-    margin: 5px 0 5px 0;
-    padding: 3px 0 3px 10px;
-    text-align: left;
-    width: 150px;
-    word-wrap: break-word;
-  
-    /* position: absolute;
+  /* width: 100%;
+  height: 100%; */
+  padding: 0;
+  margin: 0;
+}
+
+.detail-title {
+  font-style: italic;
+  margin-left: 0px;
+  /* border: 1px solid black; */
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+
+.perfume-name {
+  font-size: 25px;
+}
+.perfume-designer {
+  font-size: 15px;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  margin: 20px 0 30px 0;
+}
+
+.image-large {
+  height: 250px;
+  /* border: 1px solid black; */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+.accord-pyramid-container {
+  display: flex;
+}
+.second-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  margin-bottom: 50px;
+}
+
+.main-accords-section {
+  display: flex;
+  margin: 0;
+  border: 1px solid black;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.pill {
+  border-radius: 20px;
+  border: 1px solid black;
+  margin: 5px 0 5px 0;
+  padding: 3px 0 3px 10px;
+  text-align: left;
+  width: 150px;
+  word-wrap: break-word;
+
+  /* position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0; */
-    background-color: rgba(131, 157, 174, 0.72);
-    /* visibility: hidden;
+  background-color: rgba(131, 157, 174, 0.72);
+  /* visibility: hidden;
     opacity: 0; */
-    cursor: pointer;
-  
-    /* transition effect. not necessary */
-    transition: opacity 0.2s, visibility 0.2s;
-  }
-  
-  .pill-wrap:hover .pill {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .perfume-pyramid {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid black;
-  }
-  
-  .notes-section {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .perfume-pyramid img {
-    width: 75px;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  h3 {
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-  
-  .notes-section li {
-    margin-bottom: 5px;
-    font-size: 13px;
-    text-align: center;
-  }
-  
+  cursor: pointer;
+
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.pill-wrap:hover .pill {
+  visibility: visible;
+  opacity: 1;
+}
+
+.perfume-pyramid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.notes-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.perfume-pyramid img {
+  width: 75px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h3 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.notes-section li {
+  margin-bottom: 5px;
+  font-size: 13px;
+  text-align: center;
+}

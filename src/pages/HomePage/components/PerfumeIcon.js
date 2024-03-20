@@ -27,7 +27,9 @@ function PerfumeIcon(perfumes) {
             ></img>
             {/* image description is hidden with css unless hovered over */}
             <Link
-              to={`perfume-details/${perfume.name}%by%${perfume.designer}`}
+              to={`perfume-details/${encodeURIComponent(
+                perfume.name
+              )}%20by%20${encodeURIComponent(perfume.designer)}`}
               state={perfume}
             >
               <div className="img__description">

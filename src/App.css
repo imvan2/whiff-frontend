@@ -24,7 +24,7 @@ html {
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   /* border: 5px solid black; */
-  margin: 30px 80px 20px 80px;
+  margin: 30px 0px 20px 0px;
   width: auto;
   gap: 25px;
 }
@@ -52,7 +52,7 @@ html {
 .search-bar {
   border: 1px solid gray;
   border-radius: 30px;
-  margin: 0px 80px 30px 80px;
+  margin-bottom: 20px;
   max-width: 1600px;
   width: 83.5vw;
   height: 1.5vw;
@@ -60,6 +60,7 @@ html {
   text-align: center;
   justify-content: center;
   color: rgba(131, 157, 174, 0.72);
+  padding: 0;
 }
 
 .section {

@@ -10,7 +10,7 @@ function Top5() {
   const savingDesignerName = (designers, perfumes) => {
     for (let i = 0; i < perfumes.length; i++) {
       for (let j = 0; j < designers.length; j++) {
-        if (perfumes[i]["designer"] == j + 1) {
+        if (perfumes[i]["designer"] === designers[j]["id"]) {
           perfumes[i]["designer"] = designers[j]["name"];
         }
       }
@@ -21,7 +21,7 @@ function Top5() {
 
   const ordering = () => {
     if (orderByRating) {
-      // TODO: SORT BY RATING
+      // Sort by rating
       const perfumesSorted = [...perfumes].sort((a, b) => b.rating - a.rating);
 
       // Update state with sorted array

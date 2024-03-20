@@ -12,7 +12,7 @@ function NewSection() {
   const savingDesignerName = (designers, perfumes) => {
     for (let i = 0; i < perfumes.length; i++) {
       for (let j = 0; j < designers.length; j++) {
-        if (perfumes[i]["designer"] == j + 1) {
+        if (perfumes[i]["designer"] === designers[j]["id"]) {
           perfumes[i]["designer"] = designers[j]["name"];
         }
       }
@@ -22,15 +22,12 @@ function NewSection() {
   };
 
   const ordering = () => {
-    if (orderByNew) {
-      // TODO: SORT BY RATING
-      const perfumesSorted = [...perfumes].sort(
-        (a, b) => b.timestamp - a.timestamp
-      );
+    const perfumesSorted = [...perfumes].sort(
+      (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
+    );
 
-      // Update state with sorted array
-      setPerfumes(perfumesSorted);
-    }
+    // Update state with sorted array
+    setPerfumes(perfumesSorted);
   };
 
   const fetchingData = async () => {
