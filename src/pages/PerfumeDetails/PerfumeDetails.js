@@ -51,7 +51,6 @@ function PerfumeDetails() {
       }
     }
     setPerfume(perfume);
-    console.log(perfume);
   };
 
   const fetchingData = async () => {
@@ -110,7 +109,10 @@ function PerfumeDetails() {
             src={perfumeData.image}
             alt={perfumeData.name + " by " + perfumeData.designer}
           ></img>
-          <div className="description">{perfumeData.summary}</div>
+          <div className="description">
+            <hi className="summary-review">My review</hi>
+            {perfumeData.summary}
+          </div>
         </div>
         <div className="second-section">
           <div className="main-accords-section">
