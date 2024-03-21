@@ -48,19 +48,21 @@ html {
   min-width: 125px;
 }
 
-/* TODO: NEED TO FIX THE SEARCH BAR WIDTH*/
 .search-bar {
   border: 1px solid gray;
   border-radius: 30px;
   margin-bottom: 20px;
-  /* max-width: 1600px; */
   width: 100%;
   height: 1.5vw;
-  font-size: 30px;
+  font-size: 12px;
   text-align: center;
   justify-content: center;
   color: rgba(131, 157, 174, 0.72);
   padding: 0;
+  font-style: italic;
+}
+.search-bar:focus {
+  outline: none;
 }
 
 .section {
@@ -148,10 +150,10 @@ html {
   visibility: visible;
   opacity: 1;
 }
-
 .perfume-name {
   font-weight: 600;
 }
+
 .designer-name {
   font-weight: 400;
 }

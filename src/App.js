@@ -7,8 +7,8 @@ import Perfumes from "./pages/Perfumes/Perfumes";
 import Brands from "./pages/Brands/Brands";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import NewPerfumes from "./pages/NewPerfumes/NewPerfumes";
-import Top5 from "./pages/Top5/Top5";
+// import NewPerfumes from "./pages/NewPerfumes/NewPerfumes";
+// import Top5Page from "./pages/Top5/Top5Page";
 import SearchBar from "./components/SearchBar";
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
         <Route path="/perfumes" element={<Perfumes />} />
         <Route path="/brands" element={<Brands />} />
         <Route path="/perfume-details/:id" element={<PerfumeDetails />} />
-        <Route path="/new" element={<NewPerfumes />} />
-        <Route path="/top-5" element={<Top5 />} />
+        {/* <Route path="/new" element={<NewPerfumes />} />
+        <Route path="/top-5" element={<Top5Page />} /> */}
       </Routes>
     </BrowserRouter>
   );

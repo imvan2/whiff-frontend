@@ -12,7 +12,7 @@ function SearchBar() {
     <>
       <input
         type="text"
-        placeholder=""
+        placeholder="Search"
         onChange={handleChange}
         className="search-bar"
       ></input>

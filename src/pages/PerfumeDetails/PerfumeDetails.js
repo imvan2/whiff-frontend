@@ -7,6 +7,8 @@ function PerfumeDetails() {
   let location = useLocation();
   const perfumeData = location.state;
 
+  let width = "";
+
   const [perfume, setPerfume] = useState(perfumeData);
   const [notes, setNotes] = useState([]);
   const [accords, setAccords] = useState([]);
@@ -93,12 +95,12 @@ function PerfumeDetails() {
       <div className="detail-container">
         <div className="detail-title">
           <div className="name">
-            <h1 className="perfume-name">{perfumeData.name}</h1>
-            <p className="perfume-designer">{perfumeData.designer}</p>
+            <h1 className="perfume-name-detail">{perfumeData.name}</h1>
+            <p className="perfume-designer-detail">{perfumeData.designer}</p>
           </div>
           <div className="tag">
-            {perfumeData.tags.map((tag) => {
-              return <p>{tag}</p>;
+            {perfumeData.tags.map((tag, id) => {
+              return <p key={id}>{tag}</p>;
             })}
           </div>
         </div>
@@ -110,17 +112,28 @@ function PerfumeDetails() {
             alt={perfumeData.name + " by " + perfumeData.designer}
           ></img>
           <div className="description">
-            <hi className="summary-review">My review</hi>
+            <h1 className="summary-review">My review</h1>
             {perfumeData.summary}
+
+            <p>{"My rating: " + perfumeData.rating + " out of 5"}</p>
           </div>
         </div>
         <div className="second-section">
           <div className="main-accords-section">
             <h2>Main accords</h2>
             {perfumeData.accords.map((mainAccords, id) => {
+              const width = (10 / (id + 1)) * 50 + "px";
               return (
-                <ul>
-                  <li className="pill" key={id}>
+                <ul key={id}>
+                  <li
+                    className="pill"
+                    key={mainAccords}
+                    style={{
+                      width: width,
+                      "max-width": "500px",
+                      "min-width": "85px",
+                    }}
+                  >
                     {mainAccords}
                   </li>
                 </ul>
@@ -134,7 +147,7 @@ function PerfumeDetails() {
             <div className="notes-section">
               {perfumeData.top_notes.map((note, id) => {
                 return (
-                  <ul>
+                  <ul key={id} className="pyramid-description">
                     <img src={note.image} alt={note.name}></img>
                     <li key={id}>{note.note}</li>
                   </ul>
@@ -145,7 +158,7 @@ function PerfumeDetails() {
             <div className="notes-section">
               {perfumeData.heart_notes.map((note, id) => {
                 return (
-                  <ul>
+                  <ul key={id} className="pyramid-description">
                     <img src={note.image} alt={note.name}></img>
                     <li key={id}>{note.note}</li>
                   </ul>
@@ -156,7 +169,7 @@ function PerfumeDetails() {
             <div className="notes-section">
               {perfumeData.base_notes.map((note, id) => {
                 return (
-                  <ul>
+                  <ul key={id} className="pyramid-description">
                     <img src={note.image} alt={note.name}></img>
                     <li key={id}>{note.note}</li>
                   </ul>

@@ -15,11 +15,12 @@
   justify-content: space-between;
   padding-right: 15px;
 }
-
-.perfume-name {
+.perfume-name-detail {
+  font-weight: 600;
   font-size: 35px;
 }
-.perfume-designer {
+.perfume-designer-detail {
+  font-weight: 400;
   font-size: 15px;
 }
 
@@ -58,10 +59,11 @@
 }
 .summary-review {
   font-weight: 500;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   font-style: italic;
   font-size: 15px;
 }
+
 .accord-pyramid-container {
   display: flex;
 }
@@ -78,9 +80,11 @@
   margin: 0;
   /* border: 1px solid black; */
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  align-items: flex-start;
   flex-direction: column;
+  padding: 15px;
+  text-wrap: wrap;
 }
 
 h2 {
@@ -95,11 +99,11 @@ h2 {
   margin: 5px 0 5px 0;
   padding: 3px 0 3px 10px;
   text-align: left;
-  width: 150px;
-  word-wrap: break-word;
+  /* width: 150px; */
+  width: auto;
+  padding: 10px;
+
   background-color: rgba(131, 157, 174, 0.72);
-  /* cursor: pointer; */
-  transition: opacity 0.2s, visibility 0.2s;
 }
 
 .pill-wrap:hover .pill {
@@ -110,7 +114,8 @@ h2 {
 .perfume-pyramid {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  margin-top: auto;
   align-items: center;
   /* border: 1px solid black; */
   width: 100%;
@@ -120,6 +125,13 @@ h2 {
 .notes-section {
   display: flex;
   flex-direction: row;
+}
+
+.pyramid-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .perfume-pyramid img {
