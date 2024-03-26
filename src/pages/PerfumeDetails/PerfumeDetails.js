@@ -7,8 +7,6 @@ function PerfumeDetails() {
   let location = useLocation();
   const perfumeData = location.state;
 
-  let width = "";
-
   const [perfume, setPerfume] = useState(perfumeData);
   const [notes, setNotes] = useState([]);
   const [accords, setAccords] = useState([]);

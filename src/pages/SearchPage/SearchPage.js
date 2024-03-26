@@ -1,11 +1,15 @@
-import NewSection from "../HomePage/components/NewSection";
-import Top5 from "../HomePage/components/Top5";
 import React from "react";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import PerfumeIcon from "../HomePage/components/PerfumeIcon";
 
-function Landing() {
+function SearchPage() {
+  let location = useLocation();
+  console.log("location:", location.state);
+
   const [perfumes, setPerfumes] = useState([]);
   const [designers, setDesigner] = useState([]);
+  const perfumeResults = [];
 
   // TODO: instead of looping, match the id of the designer
   const savingDesignerName = (designers, perfumes) => {
@@ -45,6 +49,16 @@ function Landing() {
     setDesigner(designerData);
   };
 
+  const searchResults = () => {
+    for (let i = 0; i < perfumes.length; i++) {
+      console.log(perfumes[i]["name"].includes(location.state));
+      if (perfumes[i]["name"].includes(location.state)) {
+        perfumeResults.push(perfumes[i]);
+      }
+    }
+    console.log(perfumeResults);
+  };
+
   useEffect(() => {
     fetchingData();
   }, []);
@@ -52,14 +66,22 @@ function Landing() {
   useEffect(() => {
     // Run savingDesignerName function when perfumes or designers change
     savingDesignerName(designers, perfumes);
-  }, [designers]);
-  
+    searchResults();
+  }, [designers, perfumeResults, location.state]);
+
+  // TODO: iterate over perfumes and find if there's a match
+
   return (
     <>
-      <NewSection perfumes={perfumes} />
-      <Top5 perfumes={perfumes} />
+      <div>
+        {perfumeResults.length > 0 ? (
+          <PerfumeIcon perfumes={perfumeResults} />
+        ) : (
+          <p>Sorry, no such perfumes</p>
+        )}
+      </div>
     </>
   );
 }
 
-export default Landing;
+export default SearchPage;

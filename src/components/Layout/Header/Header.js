@@ -1,6 +1,6 @@
 import React from "react";
-import Perfumes from "../pages/Perfumes/Perfumes";
-import Brands from "../pages/Brands/Brands";
+import Perfumes from "../../../pages/Perfumes/Perfumes";
+import Brands from "../../../pages/Brands/Brands";
 import { Link, useNavigate } from "react-router-dom";
 
 function Header() {

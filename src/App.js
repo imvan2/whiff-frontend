@@ -6,23 +6,22 @@ import PerfumeDetails from "./pages/PerfumeDetails/PerfumeDetails";
 import Perfumes from "./pages/Perfumes/Perfumes";
 import Brands from "./pages/Brands/Brands";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-// import NewPerfumes from "./pages/NewPerfumes/NewPerfumes";
-// import Top5Page from "./pages/Top5/Top5Page";
-import SearchBar from "./components/SearchBar";
+import Layout from "./components/Layout";
+import SearchPage from "./pages/SearchPage/SearchPage";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <SearchBar />
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/perfumes" element={<Perfumes />} />
-        <Route path="/brands" element={<Brands />} />
-        <Route path="/perfume-details/:id" element={<PerfumeDetails />} />
-        {/* <Route path="/new" element={<NewPerfumes />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Landing />} />
+          <Route path="/perfumes" element={<Perfumes />} />
+          <Route path="/brands" element={<Brands />} />
+          <Route path="/perfume-details/:id" element={<PerfumeDetails />} />
+          <Route path="/search" element={<SearchPage />} />
+          {/* <Route path="/new" element={<NewPerfumes />} />
         <Route path="/top-5" element={<Top5Page />} /> */}
+        </Route>
       </Routes>
     </BrowserRouter>
   );
