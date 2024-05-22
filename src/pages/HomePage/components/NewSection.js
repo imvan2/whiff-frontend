@@ -9,6 +9,7 @@ function NewSection({ perfumes }) {
 
   useEffect(() => {
     // Update state with sorted array when the perfumes prop changes
+    // [...perfumes] = shallow copies of the perfumes array, changes are not reflected
     const perfumesSorted = [...perfumes].sort(
       (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
     );
