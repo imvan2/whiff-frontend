@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 function SearchBar() {
   const [searchInput, setSearchInput] = useState("");
   const [isSearch, setIsSearch] = useState(false);
@@ -30,7 +31,7 @@ function SearchBar() {
     <>
       <input
         type="text"
-        placeholder=""
+        placeholder="Search by perfume name"
         className="search-bar"
         onChange={(e) => {
           handleChange(e);
