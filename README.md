@@ -4,6 +4,8 @@ Website: [Website](https://whiff-frontend-4e758efa12c8.herokuapp.com/)
 
 Tech stack: React.js (create-react-app), vanilla CSS, HTML, Heroku, API Fetching
 
+Using Google Analytics
+
 `npm install`
 `npm start`
 
