@@ -158,10 +158,19 @@ html {
   font-weight: 400;
 }
 
-/* @media only screen and (max-width: 430px) {
+@media only screen and (max-width: 430px) {
   body,
   html {
     width: 430px;
+  }
+
+  .section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: 100%;
   }
   .header-img {
     width: 25px;
@@ -175,4 +184,4 @@ html {
     display: flex;
     flex-direction: column;
   }
-} */
+}
